@@ -1,4 +1,4 @@
-const { PORT, COOKIE_SECRET, REACT_APP_URL } = require('./env')
+const { PORT, COOKIE_SECRET, REACT_APP_URL, REMOTE_REACT_APP_URL } = require('./env')
 
 const express = require('express')
 const path = require('path')
@@ -6,7 +6,7 @@ const app = express()
 const server = require('http').createServer(app)
 
 const corsOptions = {
-    origin: [REACT_APP_URL],
+    origin: [REACT_APP_URL, REMOTE_REACT_APP_URL],
     credentials: true 
 }
 app.use(require('cors')(corsOptions))
