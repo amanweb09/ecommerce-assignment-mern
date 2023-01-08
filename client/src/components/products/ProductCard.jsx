@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setCounter } from '../../store/cartSlice'
 import { toast } from 'react-toastify'
 import { addToDbCart } from '../../api'
@@ -16,7 +16,14 @@ const ProductCard = ({
 
     const dispatch = useDispatch()
 
+    const { isAuthenticated } = useSelector((state) => state.auth)
+
     async function addToCart() {
+
+        if(!isAuthenticated) {
+            toast.error('Please login to add products to cart')
+            return;
+        }
 
         try {
             const { data } = await addToDbCart({ productId: _id })

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { logoutUser } from '../../api'
 import { toast } from 'react-toastify'
 import { setAuth } from '../../store/authSlice'
+import { initCart } from '../../store/cartSlice'
 
 const Navbar = () => {
 
@@ -22,6 +23,7 @@ const Navbar = () => {
                 isAuthenticated: false,
                 user: null
             }))
+            dispatch(initCart({ counter: 0 }))
             toast.success('logged out...')
 
         } catch (error) {
