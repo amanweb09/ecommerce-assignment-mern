@@ -3,10 +3,10 @@ import { store } from '../store'
 
 const api = axios.create({
     baseURL:
-        import.meta.env.DEV
+        /* import.meta.env.DEV
             ?
             import.meta.env.VITE_SERVER_URL
-            :
+            : */
             import.meta.env.VITE_REMOTE_URL,
     withCredentials: true,
     headers: {
@@ -14,10 +14,10 @@ const api = axios.create({
         Accept: 'application/json',
         'Access-Control-Allow-Credentials': true,
         'Access-Control-Allow-Origin':
-            import.meta.env.DEV
+            /* import.meta.env.DEV
                 ?
                 import.meta.env.VITE_SERVER_URL
-                :
+                : */
                 import.meta.env.VITE_REMOTE_URL,
     }
 })
