@@ -12,6 +12,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    
     async function getProducts() {
       try {
         const { data } = await getAllProducts()
