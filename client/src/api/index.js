@@ -2,7 +2,7 @@ import axios from 'axios'
 import { store } from '../store'
 
 const api = axios.create({
-    baseURL: import.meta.env.DEV
+    baseURL: import.meta.env.DEV === true
         ?
         import.meta.env.VITE_SERVER_URL
         :
@@ -12,7 +12,7 @@ const api = axios.create({
         'Content-Type': 'application/json',
         Accept: 'application/json',
         'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Origin': import.meta.env.DEV
+        'Access-Control-Allow-Origin': import.meta.env.DEV === true
             ?
             import.meta.env.VITE_SERVER_URL
             :
