@@ -2,13 +2,13 @@ import axios from 'axios'
 import { store } from '../store'
 
 const api = axios.create({
-    baseURL: /* import.meta.env.DEV ? import.meta.env.VITE_SERVER_URL :  */import.meta.env.VITE_REMOTE_URL,
+    baseURL: import.meta.env.DEV ? import.meta.env.VITE_SERVER_URL : import.meta.env.VITE_REMOTE_URL,
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
         'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Origin': /* import.meta.env.PROD ? import.meta.env.VITE_SERVER_URL :  */import.meta.env.VITE_REMOTE_URL,
+        'Access-Control-Allow-Origin': import.meta.env.PROD ? import.meta.env.VITE_SERVER_URL : import.meta.env.VITE_REMOTE_URL,
     }
 })
 
