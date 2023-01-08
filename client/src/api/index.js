@@ -13,7 +13,12 @@ const api = axios.create({
         'Content-Type': 'application/json',
         Accept: 'application/json',
         'Access-Control-Allow-Credentials': true,
-        'Access-Control-Allow-Origin': import.meta.env.PROD ? import.meta.env.VITE_SERVER_URL : import.meta.env.VITE_REMOTE_URL,
+        'Access-Control-Allow-Origin':
+            import.meta.env.DEV
+                ?
+                import.meta.env.VITE_SERVER_URL
+                :
+                import.meta.env.VITE_REMOTE_URL,
     }
 })
 
