@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoadingCard = ({ text = "Setting up everything for you..." }) => {
     return (
-        <div className='w-full h-screen fixed inset-0 bg-white flex-center border border-red-500'>
+        <div className='w-full h-screen fixed inset-0 bg-white flex-center'>
             <div className='flex-col flex-center'>
                 <div
                     style={{ zIndex: '9999' }}

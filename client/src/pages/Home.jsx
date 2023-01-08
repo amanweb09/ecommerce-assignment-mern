@@ -29,7 +29,7 @@ const Home = () => {
 
   if (loading) return <LoadingCard />
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto sm:px-0 px-2'>
       {/* banner */}
       <img
         className='w-full'
@@ -39,7 +39,7 @@ const Home = () => {
       <div className="mt-8">
         <h1 className='text-neutral-700 font-semibold mb-6'>Our Trending Products</h1>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
           {
             products.length > 0 && products.map((product) => {
               return <ProductCard key={product._id} {...product} />

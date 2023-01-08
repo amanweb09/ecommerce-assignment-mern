@@ -51,11 +51,11 @@ const Login = () => {
     return (
         <>
             <div className='container mx-auto pt-6 flex'>
-                <div className='flex-1 bg-sky-200'>
+                <div className='flex-1 sm:block hidden bg-sky-200'>
 
                 </div>
-                <div className='w-3/4 flex-center'>
-                    <div className="w-96 h-96 bg-white my-8">
+                <div className='w-full sm:w-3/4 flex-center'>
+                    <div className="w-full sm:w-96 sm:h-96 bg-white my-8">
                         <h1 className='text-2xl text-center mt-4 font-bold'>Welcome Back</h1>
                         <h3 className='text-center text-neutral-500'>Login to your account</h3>
 

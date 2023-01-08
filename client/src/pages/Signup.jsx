@@ -52,10 +52,10 @@ const Signup = () => {
     return (
         <>
             <div className='container mx-auto flex'>
-                <div className='flex-1 bg-sky-200'></div>
-                <div className='flex-center w-3/4'>
-                    <div className="w-96 mb-10 pb-6 bg-white shadow-md mt-8">
-                        <h1 className='text-center mt-4 font-bold text-xl'>Good to see you</h1>
+                <div className='flex-1 bg-sky-200 sm:block hidden'></div>
+                <div className='flex-center w-full sm:w-3/4'>
+                    <div className="w-full sm:w-96 mb-10 pb-6 bg-white shadow-md mt-8">
+                        <h1 className='text-center mt-4 font-bold text-2xl'>Good to see you</h1>
                         <h3 className='text-neutral-500 text-center'>Create an account</h3>
                         <form action="#" className='flex-center flex-col mt-12'>
                             <label htmlFor="email">Name</label>

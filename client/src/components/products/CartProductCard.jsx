@@ -11,13 +11,13 @@ console.log(product);
     const thumbnailSrc = images.thumbnail.location === 'local' ? `/images/${images.thumbnail.src}` : images.thumbnail.src
 
     return (
-        <div className=" h-24 flex items-center my-4 py-4">
+        <div className="h-24 flex items-center my-4 py-4 px-2 sm:w-max w-full">
             <img
-                className='w-20 mr-8'
+                className='w-12 sm:w-20 mr-8'
                 src={thumbnailSrc}
                 alt="product image" />
-            <div className='w-48'>
-                <h3 className='font-semibold block'>{title}</h3>
+            <div className='w-28 sm:w-48'>
+                <h3 className='font-semibold block sm:text-base text-sm'>{title}</h3>
                 <h4 className='text-red-500'>&#8377;{price}</h4>
             </div>
 

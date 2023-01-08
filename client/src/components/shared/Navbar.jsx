@@ -30,25 +30,25 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='container mx-auto pb-4 '>
+        <nav className='container mx-auto pb-4'>
 
             {/* banner */}
-            <div className='w-full bg-neutral-100 py-2 text-sm text-neutral-700 font-semibold px-4'>
+            <div className='w-full bg-neutral-100 py-2 text-xs sm:text-sm text-neutral-700 font-semibold px-4'>
                 Upto 50% off on entire store
             </div>
 
             {/* nav main */}
-            <div className='flex items-center justify-between border-b-[2px] border-b-solid border-b-neutral-200'>
+            <div className='flex items-center justify-between border-b-[2px] border-b-solid border-b-neutral-200 sm:px-0 px-2'>
                 {/* logo */}
                 <NavLink to={'/'}>
-                    <div className='mr-12'>
-                        <h1 className='text-3xl font-bold'>
-                            shop<span className='text-orange-500 text-6xl'>.</span>mart
+                    <div className='sm:mr-12'>
+                        <h1 className='text-xl sm:text-3xl font-bold'>
+                            shop<span className='text-orange-500 text-3xl sm:text-6xl'>.</span>mart
                         </h1>
                     </div>
                 </NavLink>
 
-                <div className='flex items-center ml-10'>
+                <div className='hidden sm:flex items-center ml-10'>
                     <input
                         placeholder='Search a product'
                         type="text"
@@ -73,16 +73,16 @@ const Navbar = () => {
                             ?
                             <div
                                 onClick={handleLogout}
-                                className='flex items-center cursor-pointer'>
-                                <UserIcon className='w-8 h-8' />
+                                className='flex items-center cursor-pointer sm:mr-0 mr-4'>
+                                <UserIcon className='w-6 h-6 sm:w-8 sm:h-8' />
                                 <div className='text-sm'>
                                     <span className="text-xs block">{user.name}</span>
-                                    <span className="">Logout</span>
+                                    <span className="sm:text-base text-sm">Logout</span>
                                 </div>
                             </div>
                             : <div
                                 onClick={() => navigate('/login')}
-                                className='flex items-center cursor-pointer'>
+                                className='flex items-center cursor-pointer sm:mr-0 mr-4'>
                                 <UserIcon className='w-8 h-8' />
                                 <div className='text-sm'>
                                     <span className="text-xs block">Sign in</span>
@@ -93,7 +93,7 @@ const Navbar = () => {
 
                     <div
                         onClick={() => navigate('/login')}
-                        className='relative mx-8 cursor-pointer'>
+                        className='relative mx-8 cursor-pointer sm:block hidden'>
                         <HeartIcon className='w-8 h-8' />
                         <div
                             className="w-5 h-5 rounded-full bg-red-500 text-white font-bold flex-center absolute top-0 right-[-5px]">
@@ -113,7 +113,7 @@ const Navbar = () => {
             </div>
 
             {/* links */}
-            <div className="flex items-center justify-end py-4 text-sm">
+            <div className="flex items-center sm:text-sm text-xs justify-end py-4 sm:px-0 px-2">
                 <NavLink to={'/'}>
                     <span className='cursor-pointer'>Home</span>
                 </NavLink>
