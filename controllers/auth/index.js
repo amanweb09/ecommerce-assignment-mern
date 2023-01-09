@@ -131,13 +131,7 @@ class AuthController {
             })
 
             user.refreshToken = refreshToken
-            const cart = {
-                user: user._id,
-                items: [],
-                totalPrice: 0,
-                totalQty: 0
-            }
-
+        
             await user.save()
             await
 
